@@ -202,7 +202,7 @@ def main():
 
                     if episode % SAVE_FREQ == 0:
                         torch.save({'model': policy_net.state_dict(), 'optimizer': optimizer.state_dict()}, SAVE_PATH)
-                        print(f"💾 Saved model at episode {episode}")
+                        print(f"Saved model at episode {episode}")
 
                     if episode % 500 == 0:
                         elapsed = time.time() - start_time
