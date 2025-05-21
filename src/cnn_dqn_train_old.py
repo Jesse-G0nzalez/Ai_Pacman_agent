@@ -102,7 +102,7 @@ def main():
     os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print(f"✅ Using device: {device}")
+    print(f"Using device: {device}")
 
     # Vectorized environments
     envs = AsyncVectorEnv([make_env_fn() for _ in range(NUM_ENVS)])
@@ -127,9 +127,9 @@ def main():
         chk = torch.load(SAVE_PATH, map_location=device)
         policy_net.load_state_dict(chk['model'])
         optimizer.load_state_dict(chk['optimizer'])
-        print("✅ Resumed training from saved checkpoint.")
+        print("Resumed training from saved checkpoint.")
     else:
-        print("🚀 Starting fresh training.")
+        print("Starting fresh training.")
 
     # CSV log setup
     if not os.path.exists(LOG_PATH):
@@ -218,9 +218,9 @@ def main():
                         print("-"*42)
 
     except KeyboardInterrupt:
-        print("\n🛑 Training interrupted by user.")
+        print("\nTraining interrupted by user.")
         torch.save({'model': policy_net.state_dict(), 'optimizer': optimizer.state_dict()}, SAVE_PATH)
-        print("💾 Saved latest model before exit.")
+        print("Saved latest model before exit.")
 
 if __name__ == "__main__":
     main()
