@@ -2,6 +2,15 @@
 
 A Deep Q-Learning AI agent that learns to play **Ms. Pac-Man** using **PyTorch**, **Gymnasium**, and **Stable-Retro**.
 
+---
+## Table of Contents
+
+- [Scope](#scope)
+- [Requirements](#requirements)
+- [Full Setup Guide (Ubuntu)](#full-setup-guide-ubuntu)
+- [Running and Training the Agent](#running-and-training-the-agent)
+---
+
 ## Scope
 
 This project demonstrates how to train an AI agent using **Deep Q-Learning** to play the classic game *Ms. Pac-Man (NES)* through a modern reinforcement learning pipeline.
