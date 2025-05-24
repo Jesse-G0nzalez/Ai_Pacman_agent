@@ -9,7 +9,7 @@ A Deep Q-Learning AI agent that learns to play **Ms. Pac-Man** using **PyTorch**
 
 - [Scope](#scope)
 - [Requirements](#requirements)
-- [Installation Guide](#Installation Guide)
+- [Installation Guide](#Installation_Guide)
 - [Demonstration](#Demonstration)
 
 ---
