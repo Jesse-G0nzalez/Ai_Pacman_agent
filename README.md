@@ -2,13 +2,16 @@
 
 A Deep Q-Learning AI agent that learns to play **Ms. Pac-Man** using **PyTorch**, **Gymnasium**, and **Stable-Retro**.
 
+![Agent playing Ms. Pac-Man](videos/demo.gif)
+
 ---
 ## Table of Contents
 
 - [Scope](#scope)
 - [Requirements](#requirements)
-- [Full Setup Guide (Ubuntu)](#full-setup-guide-ubuntu)
-- [Running and Training the Agent](#running-and-training-the-agent)
+- [Installation Guide](#Installation Guide)
+- [Demonstration](#Demonstration)
+
 ---
 
 ## Scope
@@ -44,6 +47,8 @@ The following must be installed:
 - A valid Ms. Pac-Man NES ROM
 
 ---
+
+## Installation Guide
 
  **If your system is not set up yet**, use the dropdown below to install everything:
  <details>
@@ -143,6 +148,8 @@ The following must be installed:
   ```
 </details>
 
+
+## Demonstration
 
  **To learn how to train or run the agent**, open these dropdowns:
 
