@@ -109,7 +109,7 @@
 
         <div class="item">
           <figure class="image is-128x128 is-inline-block">
-            <img src="./static/images/team/jesse.jpg" alt="Jesse Gonzalez">
+            <img src="./static/images/team/jesse.PNG" alt="Jesse Gonzalez">
           </figure>
           <p class="subtitle is-5 has-text-centered mt-2">Jesse Gonzalez</p>
         </div>
@@ -157,7 +157,7 @@
             We implemented a convolutional neural network to approximate Q-values, leveraging techniques such as epsilon-greedy exploration, experience replay, and target network updates to ensure learning stability and performance improvement over time. Through iterative training and evaluation, the agent progressively learned to make strategic decisions to maximize its score while avoiding game-ending collisions.
           </p>
           <p>
-            The project demonstrates the practical application of reinforcement learning algorithms in a controlled game environment, providing insights into state-action value learning, policy improvement, and real-time agent behavior. A demonstration video and full source code are included below.
+            The project demonstrates the practical application of reinforcement learning algorithms in a controlled game environment, providing insights into state-action value learning, policy improvement, and real-time agent behaviour. A demonstration video and full source code are included below.
           </p>
         </div>
       </div>
@@ -171,7 +171,7 @@
         <h2 id="video" class="title is-3">Video</h2>
 
         <p class="mb-4">
-          The following video demonstrates the AI agent playing Pac-Man using reinforcement learning. It showcases the agent's learning progress, strategy, and gameplay behavior.
+          The following video demonstrates the AI agent playing Pac-Man using reinforcement learning. It showcases the agent's learning progress, strategy, and gameplay behaviour.
         </p>
 
         <div class="content has-text-centered">
@@ -180,56 +180,62 @@
                  preload="metadata"
                  playsinline
                  width="100%">
-            <source src="./static/videos/pacman_demo.mp4" type="video/mp4">
+            <source src="./static/videos/double_dqn_crop.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
       </div>
     </div>
+  </div>
+</section>
     <!--/ Video Section -->
-    
+
+<!-- 2×2 Grid of Charts -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">All Training Charts</h2>
+    <div class="columns is-multiline">
+      
+      <!-- 1st Chart -->
+      <div class="column is-half">
+        <figure class="image is-4by3">
+          <img src="./static/images/data/exploration_totalreward.png"
+               alt="Reward Convergence Plot">
+        </figure>
+      </div>
+      
+      <!-- 2nd Chart -->
+      <div class="column is-half">
+        <figure class="image is-4by3">
+          <img src="./static/images/data/learing_curve.png"
+               alt="Loss vs Mean Q-value">
+        </figure>
+      </div>
+      
+      <!-- 3rd Chart -->
+      <div class="column is-half">
+        <figure class="image is-4by3">
+          <img src="./static/images/data/length_reward.png"
+               alt="Exploration Rate vs Total Reward">
+        </figure>
+      </div>
+      
+      <!-- 4th Chart -->
+      <div class="column is-half">
+        <figure class="image is-4by3">
+          <img src="./static/images/data/meanq_loss.png"
+               alt="Episode Length vs Total Reward">
+        </figure>
+      </div>
+      
+    </div>
   </div>
 </section>
 
 
+   <!-- Results discussion and reflection -->
 <section class="section">
   <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">CNN evaluation</h2>
-          <p>
-            Confusion matrix of the CNN evaluation on the test set.
-          </p>
-
-          <img src="./static/images/results/confusion_matrix_seaborn.png"
-            class="teaser-image"
-            alt="Teaser."/>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">DQN training</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              Sample of the reward convergence plot of the DQN training.
-            </p>
-            <img src="./static/images/results/reward_convergence_plot.png"
-            class="teaser-image"
-            alt="Teaser."/>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-   <!-- Results discussion and reflection -->
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Results Discussion and Reflection</h2>
@@ -250,11 +256,11 @@
         </div>
       </div>
     </div>
-    <!--/ Results discussion and reflection -->
   </div>
 </section>
 
-
+ <!--/ Results discussion and reflection -->
+  
 <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
