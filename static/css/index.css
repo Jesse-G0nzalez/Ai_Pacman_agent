@@ -157,15 +157,3 @@ body {
 }
 
 
-/* Make team‐member avatars perfectly fill & crop their 128×128 box */
-#results-carousel .item figure.image.is-128x128 {
-  overflow: hidden;    /* hide any part of the img outside the square */
-}
-
-#results-carousel .item figure.image.is-128x128 img {
-  display: block;      /* remove inline‐block whitespace */
-  width: 100%;         /* fill width of container */
-  height: 100%;        /* fill height of container */
-  object-fit: cover;   /* preserve aspect ratio and crop to fit */
-}
-
