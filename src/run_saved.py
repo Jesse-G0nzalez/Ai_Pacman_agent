@@ -1,3 +1,4 @@
+import os
 import time
 import numpy as np
 import torch
@@ -6,12 +7,23 @@ import retro
 from pacman_wrapper import PacManRewardWrapper
 from cnn_dqn_train_old import CNN_DQN  # your model class
 
-# —– Settings —–
-CHECKPOINT_PATH = "./cnn_dqn_mspacman.pth"
-N_EPISODES     = 5
-FRAME_DELAY    = 0.02  # seconds between frames (None or 0 → no delay)
+# —— Model selection prompt ——
+print("Select model to run:")
+print("  [1] DQN         (cnn_dqn_mspacman.pth)")
+print("  [2] Double DQN  (double_dqn_mspacman.pth)")
+choice = input("Enter 1 or 2 (default=1): ").strip()
 
-# same preprocessing as training
+if choice == "2":
+    CHECKPOINT_PATH = os.path.join("models", "double_dqn_mspacman.pth")
+else:
+    CHECKPOINT_PATH = os.path.join("models", "cnn_dqn_mspacman.pth")
+
+print(f"→ Loading checkpoint: {CHECKPOINT_PATH}")
+
+# —— rest of your code unchanged —— 
+N_EPISODES     = 5
+FRAME_DELAY    = 0.02  # seconds between frames
+
 transform = transforms.Compose([
     transforms.ToPILImage(),
     transforms.Grayscale(),
@@ -20,7 +32,6 @@ transform = transforms.Compose([
 ])
 
 def make_render_env():
-    # render_mode='human' opens a window
     base = retro.make("MsPacMan-Nes", render_mode="human")
     return PacManRewardWrapper(base)
 
@@ -37,14 +48,12 @@ def run():
     n_buttons = env.unwrapped.num_buttons
     n_actions = env.action_space.n
 
-    # load your model
     model = CNN_DQN(n_actions).to(device)
     chk = torch.load(CHECKPOINT_PATH, map_location=device)
     model.load_state_dict(chk["model"])
     model.eval()
 
     for ep in range(1, N_EPISODES + 1):
-        # Gymnasium reset returns (obs, infos)
         obs, _ = env.reset()
         state = transform(obs).unsqueeze(0).to(device)
 
@@ -52,22 +61,18 @@ def run():
         total_reward = 0.0
 
         while not done:
-            # choose action
             with torch.no_grad():
-                q = model(state)                  # [1, n_actions]
+                q = model(state)
                 action = int(q.argmax(1).item())
 
-            # Gymnasium step returns (obs, rew, term, trunc, infos)
             obs, reward, terminated, truncated, _ = env.step(onehot_action(action, n_buttons))
             done = terminated or truncated
             total_reward += reward
 
-            # render & optional delay
             env.render()
             if FRAME_DELAY:
                 time.sleep(FRAME_DELAY)
 
-            # preprocess next state
             state = transform(obs).unsqueeze(0).to(device)
 
         print(f"Episode {ep} → Reward = {total_reward:.2f}")
