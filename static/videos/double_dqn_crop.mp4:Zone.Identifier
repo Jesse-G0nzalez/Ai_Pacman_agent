@@ -1,4 +1,0 @@
-[ZoneTransfer]
-ZoneId=3
-ReferrerUrl=https://cloudconvert.com/
-HostUrl=https://eu-central.storage.cloudconvert.com/tasks/73898123-f43b-4d8d-8823-3452e3d2243d/double_dqn_crop.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20250525%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20250525T054118Z&X-Amz-Expires=86400&X-Amz-Signature=c6fe25f3b5ab6b50e77de0e78f9cd8ee2b59e9ff1b13724e38ac00d574da8c18&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22double_dqn_crop.mp4%22&response-content-type=video%2Fmp4&x-id=GetObject
