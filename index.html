@@ -1,266 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="Portfolio for 41118 AI in robotics class at UTS.">
-  <meta name="keywords" content="41118">
+  <meta name="description" content="Portfolio for 41118 AI in Robotics class at UTS">
+  <meta name="keywords" content="41118, AI, Robotics, Pac-Man, Reinforcement Learning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI-Powered Pac-Man Agent: Reinforcement Learning in Action</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
+  <!-- Bulma CSS -->
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.png">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <!-- Icons -->
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <!-- Center all titles and subtitles -->
+  <style>
+    .title, .subtitle { text-align: center; }
+  </style>
+
+  <link rel="icon" href="./static/images/favicon.png">
 </head>
 <body>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">AI-Powered Pac-Man Agent: Reinforcement Learning in Action</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">Jesse Gonzalez,</span>
-            <span class="author-block">Arhma Baig,</span>
-            <span class="author-block">Megha Martin,</span>
-            <span class="author-block">Sophia Kuhnert</span>
-          </div>
-
-          <div class="is university">
-            <span class="author-block"><sup>1</sup>University Technology Sydney,</span>
-          </div>
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="#video"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/Jesse-G0nzalez/Ai_Pacman_agent"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/Jesse-G0nzalez/Ai_Pacman_agent/tree/main/src/logs"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
-            </div>
-
-          </div>
+  <!-- Hero Section -->
+  <section class="hero is-dark is-bold">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-1">AI-Powered Pac-Man Agent</h1>
+        <h2 class="subtitle is-4">Reinforcement Learning in Action | 41118 AI in Robotics, UTS</h2>
+        <div class="buttons is-centered mt-4">
+          <a href="#video" class="button is-primary is-rounded">
+            <span class="icon"><i class="fab fa-youtube"></i></span>
+            <span>Video Demo</span>
+          </a>
+          <a href="https://github.com/Jesse-G0nzalez/Ai_Pacman_agent" class="button is-link is-rounded">
+            <span class="icon"><i class="fab fa-github"></i></span>
+            <span>Source Code</span>
+          </a>
+          <a href="./static/data/logs" class="button is-info is-rounded">
+            <span class="icon"><i class="far fa-file-alt"></i></span>
+            <span>Data Logs</span>
+          </a>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="./static/images/placeholder.png"
-           class="teaser-image"
-           alt="Project Teaser Placeholder"/>
-      <h2 class="subtitle has-text-centered">
-        This placeholder image will be replaced with a custom project diagram or architecture overview. 
-        Use this space to describe the flow of your reinforcement learning framework or system pipeline.
-      </h2>
-    </div>
-  </div>
-</section> -->
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
+  <!-- Team Carousel -->
+  <section class="section">
     <div class="container">
       <h2 class="title is-3">Team Members</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-
-        <div class="item">
-          <figure class="image is-128x128 is-inline-block">
-            <img src="./static/images/team/jesse.PNG" alt="Jesse Gonzalez">
-          </figure>
-          <p class="subtitle is-5 has-text-centered mt-2">Jesse Gonzalez</p>
+      <div class="carousel carousel-animated carousel-animate-slide" data-autoplay="true">
+        <div class="carousel-container">
+          <div class="carousel-item has-background">
+            <img class="is-background" src="./static/images/team/jesse.png" alt="Jesse Gonzalez">
+            <div class="title is-5 mt-2">Jesse Gonzalez</div>
+          </div>
+          <div class="carousel-item has-background">
+            <img class="is-background" src="./static/images/team/arhma.jpg" alt="Arhma Baig">
+            <div class="title is-5 mt-2">Arhma Baig</div>
+          </div>
+          <div class="carousel-item has-background">
+            <img class="is-background" src="./static/images/team/megha.jpg" alt="Megha Martin">
+            <div class="title is-5 mt-2">Megha Martin</div>
+          </div>
+          <div class="carousel-item has-background">
+            <img class="is-background" src="./static/images/team/sophia.jpg" alt="Sophia Kuhnert">
+            <div class="title is-5 mt-2">Sophia Kuhnert</div>
+          </div>
         </div>
-
-        <div class="item">
-          <figure class="image is-128x128 is-inline-block">
-            <img src="./static/images/team/arhma.jpg" alt="Arhma Baig">
-          </figure>
-          <p class="subtitle is-5 has-text-centered mt-2">Arhma Baig</p>
-        </div>
-
-        <div class="item">
-          <figure class="image is-128x128 is-inline-block">
-            <img src="./static/images/team/megha.jpg" alt="Megha Martin">
-          </figure>
-          <p class="subtitle is-5 has-text-centered mt-2">Megha Martin</p>
-        </div>
-
-        <div class="item">
-          <figure class="image is-128x128 is-inline-block">
-            <img src="./static/images/team/sophia.jpg" alt="Sophia Kuhnert">
-          </figure>
-          <p class="subtitle is-5 has-text-centered mt-2">Sophia Kuhnert</p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            This project showcases the development of an AI agent capable of playing Pac-Man using Deep Q-Networks (DQN), as part of the 41118 AI in Robotics subject at UTS. The agent is trained within a custom Gymnasium environment that replicates classic Pac-Man dynamics, including pellet collection, ghost evasion, and reward-based navigation.
-          </p>
-          <p>
-            We implemented a convolutional neural network to approximate Q-values, leveraging techniques such as epsilon-greedy exploration, experience replay, and target network updates to ensure learning stability and performance improvement over time. Through iterative training and evaluation, the agent progressively learned to make strategic decisions to maximize its score while avoiding game-ending collisions.
-          </p>
-          <p>
-            The project demonstrates the practical application of reinforcement learning algorithms in a controlled game environment, providing insights into state-action value learning, policy improvement, and real-time agent behaviour. A demonstration video and full source code are included below.
-          </p>
+        <div class="carousel-navigation is-centered">
+          <div class="carousel-nav-left"><i class="fas fa-chevron-left"></i></div>
+          <div class="carousel-nav-right"><i class="fas fa-chevron-right"></i></div>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+  </section>
 
-
-    <!-- Video Section -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 id="video" class="title is-3">Video</h2>
-
-        <p class="mb-4">
-          The following video demonstrates the AI agent playing Pac-Man using reinforcement learning. It showcases the agent's learning progress, strategy, and gameplay behaviour.
-        </p>
-
-        <div class="content has-text-centered">
-          <video id="project-video"
-                 controls
-                 preload="metadata"
-                 playsinline
-                 width="100%">
-            <source src="./static/videos/double_dqn_crop.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+  <!-- Abstract -->
+  <section class="section">
+    <div class="container content">
+      <h2 class="title is-3">Abstract</h2>
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <p>This project showcases the development of an AI agent capable of playing Pac-Man using Deep Q-Networks (DQN). We built an end-to-end DQN agent for Ms. Pac-Man with a custom Gymnasium reward wrapper for pellet bonuses, survival incentives, and motion penalties.</p>
+          <p>Training runs on eight parallel environments (AsyncVectorEnv) with high-throughput experience replay. Our CNN ingests 84×84 grayscale frames, stacking frames to predict Q-values. Double DQN, epsilon decay, and periodic target updates ensure stable convergence.</p>
+          <p>Extensive logging captures per-episode reward, moving averages, loss, and mean Q; all visualised in training charts. Checkpoints are saved every 50 episodes, enabling resumable training and hyperparameter tuning.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
-    <!--/ Video Section -->
+  </section>
 
-<!-- 2×2 Grid of Charts -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3">All Training Charts</h2>
-    <div class="columns is-multiline">
-      
-      <!-- 1st Chart -->
-      <div class="column is-half">
-        <figure class="image is-4by3">
-          <img src="./static/images/data/exploration_totalreward.png"
-               alt="Reward Convergence Plot">
-        </figure>
-      </div>
-      
-      <!-- 2nd Chart -->
-      <div class="column is-half">
-        <figure class="image is-4by3">
-          <img src="./static/images/data/learing_curve.png"
-               alt="Loss vs Mean Q-value">
-        </figure>
-      </div>
-      
-      <!-- 3rd Chart -->
-      <div class="column is-half">
-        <figure class="image is-4by3">
-          <img src="./static/images/data/length_reward.png"
-               alt="Exploration Rate vs Total Reward">
-        </figure>
-      </div>
-      
-      <!-- 4th Chart -->
-      <div class="column is-half">
-        <figure class="image is-4by3">
-          <img src="./static/images/data/meanq_loss.png"
-               alt="Episode Length vs Total Reward">
-        </figure>
-      </div>
-      
-    </div>
-  </div>
-</section>
-
-
-   <!-- Results discussion and reflection -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Results Discussion and Reflection</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            The AI agent demonstrated clear learning progress over the course of training. Initially, the agent chose random actions and often collided with ghosts or failed to collect pellets efficiently. As training progressed, the Deep Q-Network (DQN) began to favor safer, more rewarding paths, showing an increased ability to survive longer, avoid threats, and prioritize pellet collection.
-          </p>
-          <p>
-            Evaluation of the trained model on unseen test episodes showed a noticeable improvement in average score and survival time compared to the untrained baseline. The reward convergence plot illustrated steady learning, with the total episode reward stabilizing as the epsilon-greedy exploration policy decayed.
-          </p>
-          <p>
-            However, several limitations were observed. The agent sometimes exhibited overly cautious behavior, avoiding ghosts at the cost of missing nearby rewards. The training process was also sensitive to hyperparameters such as learning rate, replay buffer size, and reward shaping. Additionally, the model was evaluated in a relatively simple and deterministic environment, which may not generalize well to more complex or randomized game scenarios.
-          </p>
-          <p>
-            Future improvements could involve extending the environment to include randomized ghost behavior, implementing prioritized experience replay, or switching to more advanced methods like Double DQN or Dueling DQN. Further, training the agent using a curriculum-based approach might help improve performance in stages of increasing difficulty.
-          </p>
-        </div>
+  <!-- Video Demo -->
+  <section id="video" class="section has-background-light">
+    <div class="container">
+      <h2 class="title is-3">Video Demonstration</h2>
+      <p class="has-text-centered mb-4">The following video demonstrates the AI agent playing Pac-Man, showcasing learning progress and gameplay strategy.</p>
+      <div class="content has-text-centered">
+        <video controls preload="metadata" playsinline width="100%">
+          <source src="./static/videos/double_dqn_crop.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
- <!--/ Results discussion and reflection -->
-  
+  <!-- Training Charts -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-3">Training Charts</h2>
+      <div class="columns is-multiline">
+        <div class="column is-half"><figure class="image is-4by3"><img src="./static/images/data/exploration_totalreward.png" alt="Exploration Rate vs Total Reward"></figure></div>
+        <div class="column is-half"><figure class="image is-4by3"><img src="./static/images/data/learing_curve.png" alt="Learning Curve"></figure></div>
+        <div class="column is-half"><figure class="image is-4by3"><img src="./static/images/data/length_reward.png" alt="Episode Length vs Total Reward"></figure></div>
+        <div class="column is-half"><figure class="image is-4by3"><img src="./static/images/data/meanq_loss.png" alt="MeanQ vs Loss"></figure></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Discussion & Reflection -->
+  <section class="section">
+    <div class="container content">
+      <h2 class="title is-3">Results Discussion & Reflection</h2>
+      <p>The Exploration Rate vs Total Reward scatter plot shows that as ε decays from 1.0 to 0.1, the agent transitions from random play to consistent high scores (600+ points once ε &lt; 0.2).</p>
+      <p>The learning curve (raw and moving-average) over 20,000 episodes shows rapid gains in early episodes and plateaus around ~550 average reward, indicating convergence.</p>
+      <p>The Episode Length vs Total Reward plot reveals a strong positive correlation: longer survival yields more pellets and higher cumulative rewards.</p>
+      <p>The MeanQ vs Loss chart illustrates initial loss spikes that taper as mean Q stabilises between 25–30, reflecting effective value learning.</p>
+      <p>Compared to a single DQN baseline, Double DQN achieved smoother initial performance, reduced reward oscillations, more efficient pellet collection, and higher scores in fewer episodes.</p>
+      <p>Future work with more resources could explore PPO, reduced input resolutions (e.g., 64×64), or extended training to 50,000 episodes for potentially further gains.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer has-background-dark has-text-white-ter">
+    <div class="content has-text-centered">
+      <p>This site was adapted from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies template</a>, CC BY-SA 4.0. Modified for 41118 AI in Robotics at UTS.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
 <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
@@ -282,3 +175,20 @@
 
 </body>
 </html>
+
+
+
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/placeholder.png"
+           class="teaser-image"
+           alt="Project Teaser Placeholder"/>
+      <h2 class="subtitle has-text-centered">
+        This placeholder image will be replaced with a custom project diagram or architecture overview. 
+        Use this space to describe the flow of your reinforcement learning framework or system pipeline.
+      </h2>
+    </div>
+  </div>
+</section> -->
