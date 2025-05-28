@@ -11,7 +11,7 @@ class PacManRewardWrapper(gym.Wrapper):
       • standard time penalty & death penalty
       • extra stagnation penalty when Pac‑Man doesn't move
     """
-    # raw Atari scores
+    # raw scores
     PELLET_SCORE       = 10
     POWER_PELLET_SCORE = 50
     FRUIT_SCORES       = {100, 300, 500, 700, 1000, 2000}
@@ -25,8 +25,8 @@ class PacManRewardWrapper(gym.Wrapper):
         fruit_reward:        float = +10.0,
         ghost_reward:        float = +20.0,
         time_penalty:        float = -0.01,
-        survival_reward:     float = +0.0,    # changed: removed free per‑step bonus
-        idle_penalty:        float = -1.0,    # changed: heavier NOOP penalty
+        survival_reward:     float = +0.0,    
+        idle_penalty:        float = -1.0,    
         death_penalty:       float = -10.0,
         level_clear_bonus:   float = +50.0,
         noop_action:         int   = 0
@@ -51,7 +51,7 @@ class PacManRewardWrapper(gym.Wrapper):
             8: 9, 9: 8,
         }
         self.last_int_action = None
-        self.last_pos = None  # track position for stagnation penalty
+        self.last_pos = None 
 
     def reset(self, **kwargs):
         self.last_int_action = None
