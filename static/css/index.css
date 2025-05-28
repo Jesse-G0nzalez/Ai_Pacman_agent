@@ -156,4 +156,22 @@ body {
   border-radius: 5px;
 }
 
+/* —— Caption overlay for team carousel —— */
+#results-carousel .item {
+  position: relative;      /* establish a positioning context */
+}
+
+#results-carousel .carousel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem 0;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  text-align: center;
+  font-size: 0.9rem;
+  pointer-events: none;    /* clicks go “through” to the carousel if needed */
+  z-index: 10;
+}
 
