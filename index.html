@@ -83,18 +83,23 @@
 </section>
 
 
-  <section class="hero teaser">
+<section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img src="./static/images/flowchart (1).png"
-            class="teaser-image"
-            alt="Teaser."/>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Eight synchronised game instances (“Vector Envs ×8”) feed raw frames into a compact 84 × 84 pre-processor, then onward to a CNN encoder that turns pixels into feature vectors. Those features drive a twin-network Double DQN (policy | target) which picks one of four joystick moves; the chosen action loops back to every environment. While the agent plays (“Playing State”), rewards, losses and Q-values stream into the Logging & Metrics panel, closing the learn-and-act cycle highlighted by the neon arrows.
-      </h2>
+           class="teaser-image"
+           alt="Flow-chart of our training loop"/>
+      <p class="subtitle is-5 has-text-centered mt-4">
+        The diagram captures our full training loop of eight parallel Ms Pac-Man games,
+        sending compressed 84 × 84 frames into a CNN encoder.
+        Those features feed a Double DQN, which chooses one of four joystick moves and
+        sends the action back to every environment. While the agent plays, rewards and losses stream
+        and log the metricscompleting the learn and act cycle shown by the neon arrows.
+      </p>
     </div>
   </div>
 </section>
+
 
 
 
