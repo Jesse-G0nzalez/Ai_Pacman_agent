@@ -28,12 +28,18 @@
 </head>
 <body>
 
+<!-- ───────────────  HERO HEADER  ─────────────── -->
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">AI-Powered Pac-Man Agent: Reinforcement Learning in Action</h1>
+
+          <!-- Title & authors -->
+          <h1 class="title is-1 publication-title">
+            AI-Powered Pac-Man Agent: Reinforcement Learning in Action
+          </h1>
+
           <div class="is-size-5 publication-authors">
             <span class="author-block">Jesse Gonzalez,</span>
             <span class="author-block">Arhma Baig,</span>
@@ -42,66 +48,58 @@
           </div>
 
           <div class="is university">
-            <span class="author-block"><sup>1</sup>University Technology Sydney,</span>
+            <span class="author-block"><sup>1</sup>University Technology Sydney</span>
           </div>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
+          <!-- Link buttons -->
+          <div class="publication-links mt-4">
+
             <!-- Video = red -->
             <span class="link-block">
-            <a href="#video"
-               class="external-link button is-normal is-rounded is-danger">
-            <span class="icon"><i class="fab fa-youtube"></i></span>
-            <span>Video</span>
-          </a>
-        </span>
+              <a href="#video"
+                 class="external-link button is-normal is-rounded is-danger">
+                <span class="icon"><i class="fab fa-youtube"></i></span>
+                <span>Video</span>
+              </a>
+            </span>
 
-        <!-- Code = dark / GitHub black -->
-        <span class="link-block">
-        <a href="https://github.com/Jesse-G0nzalez/Ai_Pacman_agent"
-       class="external-link button is-normal is-rounded is-dark">
-        <span class="icon"><i class="fab fa-github"></i></span>
-        <span>Code</span>
-      </a>
-    </span>
+            <!-- Code = dark -->
+            <span class="link-block">
+              <a href="https://github.com/Jesse-G0nzalez/Ai_Pacman_agent"
+                 class="external-link button is-normal is-rounded is-dark"
+                 target="_blank">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Code</span>
+              </a>
+            </span>
 
-      <!-- Data = green -->
-        <span class="link-block">
-          <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vS-hLMVBaeRZxhy1Uv8nCXN54Xu9sdhYe3NwtZPsTBsKUvv40reBiF156ZLEx5Tp4k6GGEdBqrWCMqd/pubhtml"
-             class="external-link button is-normal is-rounded is-success">
-          <span class="icon"><i class="far fa-images"></i></span>
-          <span>Data</span>
-           </a>
-          </span>
-         </div>
-        </div>
+            <!-- Data = green -->
+            <span class="link-block">
+              <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vS-hLMVBaeRZxhy1Uv8nCXN54Xu9sdhYe3NwtZPsTBsKUvv40reBiF156ZLEx5Tp4k6GGEdBqrWCMqd/pubhtml"
+                 class="external-link button is-normal is-rounded is-success"
+                 target="_blank">
+                <span class="icon"><i class="far fa-images"></i></span>
+                <span>Data</span>
+              </a>
+            </span>
 
-        </div>
-      </div>
-    </div>
-  </div>
+            <!-- Document = blue -->
+            <span class="link-block">
+              <a href="https://example.com/your_report.pdf"
+                 class="external-link button is-normal is-rounded is-link"
+                 target="_blank">
+                <span class="icon"><i class="fas fa-file-alt"></i></span>
+                <span>Document</span>
+              </a>
+            </span>
+
+          </div> <!-- /publication-links -->
+
+        </div> <!-- /column -->
+      </div> <!-- /columns -->
+    </div> <!-- /container -->
+  </div> <!-- /hero-body -->
 </section>
-
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="./static/images/flowchart (1).png"
-           class="teaser-image"
-           alt="Flow-chart of our training loop"/>
-      <p class="subtitle is-5 has-text-centered mt-4">
-        The diagram captures our full training loop of eight parallel Ms Pac-Man games,
-        sending compressed 84 × 84 frames into a CNN encoder.
-        Those features feed a Double DQN, which chooses one of four joystick moves and
-        sends the action back to every environment. While the agent plays, rewards and losses stream
-        and log the metricscompleting the learn and act cycle shown by the neon arrows.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-
 
 <section class="hero is-light is-small">
   <div class="hero-body">
@@ -145,6 +143,23 @@
       </div>
     </div>
     <!--/ Abstract. -->
+
+  <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/flowchart (1).png"
+           class="teaser-image"
+           alt="Flow-chart of our training loop"/>
+      <p class="subtitle is-5 has-text-centered mt-4">
+        The diagram captures our full training loop of eight parallel Ms Pac-Man games,
+        sending compressed 84 × 84 frames into a CNN encoder.
+        Those features feed a Double DQN, which chooses one of four joystick moves and
+        sends the action back to every environment. While the agent plays, rewards and losses stream
+        and log the metricscompleting the learn and act cycle shown by the neon arrows.
+      </p>
+    </div>
+  </div>
+</section>
 
 
     <!-- Video Section -->
