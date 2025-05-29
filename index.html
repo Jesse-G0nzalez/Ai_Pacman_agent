@@ -47,38 +47,34 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="#video"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/Jesse-G0nzalez/Ai_Pacman_agent"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                </a>
-              </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/Jesse-G0nzalez/Ai_Pacman_agent/tree/main/src/logs"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                </a>
-              </span>
-            </div>
-          </div>
+            <!-- Video = red -->
+            <span class="link-block">
+            <a href="#video"
+               class="external-link button is-normal is-rounded is-danger">
+            <span class="icon"><i class="fab fa-youtube"></i></span>
+            <span>Video</span>
+          </a>
+        </span>
+
+        <!-- Code = dark / GitHub black -->
+        <span class="link-block">
+        <a href="https://github.com/Jesse-G0nzalez/Ai_Pacman_agent"
+       class="external-link button is-normal is-rounded is-dark">
+        <span class="icon"><i class="fab fa-github"></i></span>
+        <span>Code</span>
+      </a>
+    </span>
+
+      <!-- Data = green -->
+        <span class="link-block">
+          <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vS-hLMVBaeRZxhy1Uv8nCXN54Xu9sdhYe3NwtZPsTBsKUvv40reBiF156ZLEx5Tp4k6GGEdBqrWCMqd/pubhtml"
+             class="external-link button is-normal is-rounded is-success">
+          <span class="icon"><i class="far fa-images"></i></span>
+          <span>Data</span>
+           </a>
+          </span>
+         </div>
+        </div>
 
         </div>
       </div>
@@ -94,7 +90,7 @@
             class="teaser-image"
             alt="Teaser."/>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">41118 Portfolio </span> Eight parallel Ms Pac-Man environments (top-left) stream raw frames that are down-sampled to 84 × 84 pixels in the pre-processing block. Those compact images feed a CNN encoder, which extracts visual features for a Double DQN pair (policy | target). The network selects one of Pac-Man’s four moves; that 4-button action loops back to all environments so the agent continues playing. Meanwhile, training statistics—reward curves, loss, Q-values—are logged and visualised. The right-most panel shows the agent in its “Playing State,” chomping pellets with the learned policy. Neon arrows trace the full data-and-control loop from raw gameplay to model update and back.
+        <span class="dnerf">Eight synchronised game instances (“Vector Envs ×8”) feed raw frames into a compact 84 × 84 pre-processor, then onward to a CNN encoder that turns pixels into feature vectors. Those features drive a twin-network Double DQN (policy | target) which picks one of four joystick moves; the chosen action loops back to every environment. While the agent plays (“Playing State”), rewards, losses and Q-values stream into the Logging & Metrics panel, closing the learn-and-act cycle highlighted by the neon arrows.
       </h2>
     </div>
   </div>
