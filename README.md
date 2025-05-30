@@ -173,7 +173,7 @@ The following must be installed:
 
   ### Step 3: Start Training 
   ```bash 
-  python cnn_dqn_train_old.py 
+  python double_dqn_train.py
   ``` 
   The agent will start training across multiple environments. Training progress will be logged to the `logs/` folder. 
   
